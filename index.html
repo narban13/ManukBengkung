@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ruang Baca Cerita</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a href="#top" class="brand" id="siteTitle">Ruang Baca</a>
+      <div class="controls">
+        <button type="button" class="btn" id="fontDecrease" aria-label="Perkecil huruf">A-</button>
+        <button type="button" class="btn" id="fontIncrease" aria-label="Perbesar huruf">A+</button>
+        <button type="button" class="btn" id="themeToggle" aria-label="Ganti tema">Mode Gelap</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container main-layout" id="top">
+    <section class="hero-card">
+      <p class="badge">Cerita Bersambung</p>
+      <h1 id="storyTitle">Judul Cerita Kamu</h1>
+      <p class="synopsis" id="storySynopsis">
+        Tulis sinopsis singkat cerita di sini. Pembaca bisa memilih bab dari daftar di bawah
+        atau melanjutkan bab terakhir yang dibuka.
+      </p>
+      <div class="hero-actions">
+        <button type="button" class="btn btn-primary" id="continueBtn">Mulai Membaca</button>
+      </div>
+    </section>
+
+    <section class="chapters-section">
+      <h2>Daftar Bab</h2>
+      <div id="chapterList" class="chapter-list"></div>
+    </section>
+
+    <article class="reader-card" id="readerSection" aria-live="polite">
+      <div class="reader-meta">
+        <span id="chapterIndicator">Bab 1</span>
+        <span id="readTime">~2 menit baca</span>
+      </div>
+      <h2 id="chapterHeading">Judul Bab</h2>
+      <div id="chapterContent" class="chapter-content"></div>
+
+      <nav class="chapter-nav" aria-label="Navigasi bab">
+        <button type="button" class="btn" id="prevChapterBtn">← Bab Sebelumnya</button>
+        <button type="button" class="btn btn-primary" id="nextChapterBtn">Bab Berikutnya →</button>
+      </nav>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Dibuat dengan GitHub Pages • Progres baca tersimpan otomatis di browser kamu.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
